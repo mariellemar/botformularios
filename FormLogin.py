@@ -8,9 +8,10 @@ class FormLogin(FormBase):
         
     
     def formulario_login(self):
-        relativo = r'templates\form_login.html'
+        relativo = 'templates/form_login.html'
         caminho = os.path.abspath(relativo)
-        self.bot.browse(f'file:///{caminho.replace("\\", "/")}')
+        caminho_url = caminho.replace("\\", "/")
+        self.bot.browse(f'file:///{caminho_url}')
         self.bot.wait(500)
         
         

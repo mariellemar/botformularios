@@ -35,10 +35,6 @@ def adicionar_contato(form_contato: FormContato, qtd: range):
         form_contato.enviar()
 
 
-
-
-
-
 def main():
     maestro = BotMaestroSDK.from_sys_args()
     execution = maestro.get_execution()
@@ -57,8 +53,11 @@ def main():
             print(f"Error: {e}")
     
     finally:
-        contato.bot.stop_browser()
-        login.bot.stop_browser()
+        # if contato:
+        #     contato.bot.stop_browser()
+        # if login:
+        #     login.bot.stop_browser()
+        pass
 
 
 def not_found(label):

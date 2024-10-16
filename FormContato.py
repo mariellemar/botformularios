@@ -8,9 +8,10 @@ class FormContato(FormBase):
         
     
     def formularios_contato(self):
-        relativo = r'botformularios\templates\form_contato.html'
+        relativo = 'templates/form_contato.html'
         caminho = os.path.abspath(relativo)
-        self.bot.browse(f'file:///{caminho.replace("\\", "/")}')
+        caminho_url = caminho.replace("\\", "/")
+        self.bot.browse(f'file:///{caminho_url}')
         self.bot.wait(500)
         
         
